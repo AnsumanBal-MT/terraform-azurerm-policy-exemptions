@@ -12,7 +12,7 @@ Note: Terraform v0.13 or greater is required to use this module. Download the la
 
 ```hcl
 module "policy_exemptions" {
-  source  = "globalbao/policy-exemptions/azurerm"
+  source  = "AnsumanBal-MT/policy-exemptions/azurerm"
   version = "0.2.1"
   policyExemptions = {
     exemption1 = {
@@ -39,7 +39,7 @@ module "policy_exemptions" {
 
 ```hcl
 module "policy_exemptions" {
-  source  = "globalbao/policy-exemptions/azurerm"
+  source  = "AnsumanBal-MT/policy-exemptions/azurerm"
   version = "0.2.1"
   policyExemptions = {
     exemption1 = {
@@ -129,7 +129,7 @@ provider "azurerm" {
 
 # exemption module for subscription A
 module "policy_exemptions_subA" {
-  source  = "globalbao/policy-exemptions/azurerm"
+  source  = "AnsumanBal-MT/policy-exemptions/azurerm"
   version = "0.2.1"
   providers = {
     azurerm = azurerm.subA
@@ -166,7 +166,7 @@ module "policy_exemptions_subA" {
 
 # exemption module for subscription B
 module "policy_exemptions_subB" {
-  source  = "globalbao/policy-exemptions/azurerm"
+  source  = "AnsumanBal-MT/policy-exemptions/azurerm"
   version = "0.2.1"
   providers = {
     azurerm = azurerm.subB
