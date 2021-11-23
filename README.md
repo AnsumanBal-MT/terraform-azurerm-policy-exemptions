@@ -225,10 +225,3 @@ variable "policyExemptions" {
   default     = {}
 }
 ```
-
-# Contact
-
-* Twitter: [@coder_au](https://twitter.com/coder_au)
-* LinkedIn: [@JesseLoudon](https://www.linkedin.com/in/jesseloudon/)
-* Web: [jloudon.com](https://jloudon.com)
-* GitHub: [@JesseLoudon](https://github.com/jesseloudon)
