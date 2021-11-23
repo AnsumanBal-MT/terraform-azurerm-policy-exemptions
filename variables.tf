@@ -10,6 +10,7 @@ variable "policyExemptions" {
     exemptionCategory            = string
     expiresOn                    = string
     metadata                     = any
+    scope                        = string
   }))
   description = <<EOF
     ***For policyExemptions ARM template specs see https://docs.microsoft.com/en-us/azure/templates/microsoft.authorization/policyexemptions?tabs=json
