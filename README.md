@@ -25,6 +25,10 @@ module "policy_exemptions" {
       policyDefinitionReferenceIds = []
       exemptionCategory = "Waiver"
       expiresOn         = "2025-12-29"
+      scope             = "ResourceId"
+      /*
+      The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:       '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+      */
       metadata = {}
     }
   }
@@ -53,6 +57,10 @@ module "policy_exemptions" {
       ]
       exemptionCategory = "Waiver"
       expiresOn         = "2025-12-30"
+      scope             = "ResourceId"
+      /*
+      The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:       '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+      */
       metadata = {
         "requestedBy" : "RG team",
         "approvedBy" : "DrGovernance",
@@ -70,6 +78,10 @@ module "policy_exemptions" {
       policyDefinitionReferenceIds = []
       exemptionCategory            = "Mitigated"
       expiresOn                    = "2025-12-31"
+      scope             = "ResourceId"
+      /*
+      The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:       '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+      */
       metadata                     = {}
     },
     exemption3 = {
@@ -82,6 +94,10 @@ module "policy_exemptions" {
       policyDefinitionReferenceIds = []
       exemptionCategory            = "Waiver"
       expiresOn                    = "2025-12-29"
+      scope             = "ResourceId"
+      /*
+      The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:       '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+      */
       metadata                     = {}
     }
   }
@@ -134,6 +150,10 @@ module "policy_exemptions_subA" {
       ]
       exemptionCategory = "Waiver"
       expiresOn         = "2025-12-30"
+      scope             = "ResourceId"
+      /*
+      The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:       '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+      */
       metadata = {
         "requestedBy" : "RG team",
         "approvedBy" : "DrGovernance",
@@ -162,6 +182,10 @@ module "policy_exemptions_subB" {
       policyDefinitionReferenceIds = []
       exemptionCategory            = "Mitigated"
       expiresOn                    = "2025-12-31"
+      scope             = "ResourceId"
+      /*
+      The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:       '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+      */
       metadata                     = {}
       }
     }
@@ -182,6 +206,7 @@ variable "policyExemptions" {
     policyDefinitionReferenceIds = list(string)
     exemptionCategory            = string
     expiresOn                    = string
+    scope                        = string
     metadata                     = any
   }))
   description = <<EOF
